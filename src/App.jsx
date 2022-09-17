@@ -67,7 +67,7 @@ function App() {
               <input
                 value={task}
                 onChange={handleInput}
-                placeholder="Add Food Items"
+                placeholder="Add Task"
                 className="form__input"
                 type="text"
                 id="todo"
