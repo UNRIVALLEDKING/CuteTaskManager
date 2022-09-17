@@ -98,9 +98,9 @@ function App() {
             className="to_do_List"
             style={{
               marginTop: "1rem",
-              maxHeight: "380px",
+              maxHeight: "350px",
               overflowY: "scroll",
-              minHeight: "280px",
+              minHeight: "220px",
               zIndex: "1",
             }}
           >
