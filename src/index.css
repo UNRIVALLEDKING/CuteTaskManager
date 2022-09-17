@@ -77,7 +77,7 @@ body {
   font-family: "Gochi Hand", cursive;
   font-size: 1rem;
   color: rgba(63, 62, 65, 0.7);
-  width: 70%;
+  /* width: 70%; */
   margin-bottom: 20px;
   margin-right: 10px;
 }
