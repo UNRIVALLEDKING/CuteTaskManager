@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./App.css";
 import laptop from "./assets/laptop.png";
 
 function App() {
@@ -107,11 +106,11 @@ function App() {
           >
             {allTasks.map((task, id) => (
               <ul key={id} className="toDoList">
-                <li style={{ width: "75%", display: "inline-block" }}>
+                <li style={{ width: "65%", display: "inline-block" }}>
                   <span>{id + 1} )</span> {task.taskName}{" "}
                 </li>
                 <button onClick={() => deleteTask(task.id)} className="button">
-                  <span> Delete Task </span>
+                  <span>Dispose</span>
                 </button>
               </ul>
             ))}
