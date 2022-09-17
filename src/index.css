@@ -24,7 +24,7 @@ body {
 .container {
   width: 100%;
   height: auto;
-  min-height: 80vh;
+  min-height: 75vh;
   max-width: 500px;
   min-width: 250px;
   background: #f1f5f8;
