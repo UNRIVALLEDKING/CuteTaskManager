@@ -25,7 +25,7 @@ function App() {
   // Add Task Function
   const formSubmit = (e) => {
     e.preventDefault();
-    if (task === "" || task === " ") {
+    if (task.trim() === "") {
       setAllTasks([...allTasks]);
     } else {
       alert("Task Added");
@@ -34,14 +34,13 @@ function App() {
         { id: allTasks.length + 1, taskName: task.trim() },
       ]);
       setTask("");
-      console.log("all tasks", allTasks);
     }
   };
+  console.log("all tasks", allTasks);
 
   // Delete Task Function
   const deleteTask = (id) => {
     const removeTask = allTasks.filter((task) => {
-      console.log("remove", id, task.id, allTasks);
       return task.id !== id;
     });
     setAllTasks(removeTask);
