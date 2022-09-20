@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
 import laptop from "./assets/laptop.png";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   // States
@@ -28,11 +30,11 @@ function App() {
     if (task.trim() === "") {
       setAllTasks([...allTasks]);
     } else {
-      alert("Task Added");
       setAllTasks([
         ...allTasks,
         { id: allTasks.length + 1, taskName: task.trim() },
       ]);
+      toast("Task Added!");
       setTask("");
     }
   };
@@ -53,6 +55,7 @@ function App() {
   return (
     <>
       <div className="App">
+        <ToastContainer />
         <section className="container">
           <div className="heading">
             <img className="heading__img" src={laptop} />

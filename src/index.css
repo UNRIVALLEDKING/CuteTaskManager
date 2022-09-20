@@ -13,7 +13,7 @@ body {
   font-size: 130%;
 }
 :root {
-  --toastify-font-family: sans-serif;
+  --toastify-font-family: "Gochi Hand", cursive;
 }
 
 @media only screen and (min-width: 500px) {
