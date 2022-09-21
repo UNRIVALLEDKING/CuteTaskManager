@@ -35,7 +35,6 @@ function App() {
       setTask("");
     }
   };
-  console.log("all tasks", allTasks);
 
   // Delete Task Function
   const deleteTask = (task) => {
