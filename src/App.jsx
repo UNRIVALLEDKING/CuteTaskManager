@@ -48,6 +48,13 @@ function App() {
     setAllTasks(removeTask);
   };
 
+  // Delete All Task Function
+
+  const deleteAll = () => {
+    localStorage.clear();
+    setAllTasks([]);
+  };
+
   useEffect(() => {
     localStorage.setItem("myTasks", JSON.stringify(allTasks));
   }, [allTasks]);
@@ -91,9 +98,10 @@ function App() {
             <p style={{ marginBottom: "0px" }}>My Tasks:</p>
             <button
               className="button"
+              onClick={deleteAll}
               style={{ marginBottom: "0px", display: "inline", height: "26px" }}
             >
-              <span style={{ padding: "0.5rem 0.4rem" }}>Veiw All Tasks</span>
+              <span style={{ padding: "0.5rem 0.4rem" }}>Dispose All</span>
             </button>
           </div>
           <div
