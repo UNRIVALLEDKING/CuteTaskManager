@@ -30,10 +30,7 @@ function App() {
     if (task.trim() === "") {
       setAllTasks([...allTasks]);
     } else {
-      setAllTasks([
-        ...allTasks,
-        { id: allTasks.length + 1, taskName: task.trim() },
-      ]);
+      setAllTasks([...allTasks, { taskName: task.trim(), status: "ongoing" }]);
       toast("Task Added!");
       setTask("");
     }
@@ -41,9 +38,9 @@ function App() {
   console.log("all tasks", allTasks);
 
   // Delete Task Function
-  const deleteTask = (id) => {
-    const removeTask = allTasks.filter((task) => {
-      return task.id !== id;
+  const deleteTask = (task) => {
+    const removeTask = allTasks.filter((item, id) => {
+      return id !== task;
     });
     setAllTasks(removeTask);
   };
@@ -119,7 +116,7 @@ function App() {
                 <li style={{ width: "65%", display: "inline-block" }}>
                   <span>{id + 1} )</span> {task.taskName}{" "}
                 </li>
-                <button onClick={() => deleteTask(task.id)} className="button">
+                <button onClick={() => deleteTask(id)} className="button">
                   <span>Dispose</span>
                 </button>
               </ul>
