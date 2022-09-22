@@ -132,7 +132,7 @@ body {
 .toDoList li:hover {
   text-decoration: line-through wavy #24bffb;
 }
-.toDoList .comp {
+.toDoList .complete {
   text-decoration: line-through wavy #24bffb;
 }
 
