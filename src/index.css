@@ -130,10 +130,10 @@ body {
   padding: 0.5rem;
 }
 .toDoList .li:hover {
-  text-decoration: line-through wavy;
+  text-decoration: line-through wavy #494a4b;
 }
 .toDoList .complete {
-  text-decoration: line-through;
+  text-decoration: line-through #494a4b;
 }
 
 /* Spinning wheel */
