@@ -130,7 +130,7 @@ function App() {
               <ul key={id} className="toDoList">
                 <li
                   style={{ width: "65%", display: "inline-block" }}
-                  className={task.status === "completed" ? "complete" : ""}
+                  className={task.status === "completed" ? "complete" : "li"}
                 >
                   <span>{id + 1} )</span> {task.taskName}{" "}
                 </li>
