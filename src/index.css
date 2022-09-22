@@ -132,6 +132,9 @@ body {
 .toDoList li:hover {
   text-decoration: line-through wavy #24bffb;
 }
+.toDoList .comp {
+  text-decoration: line-through wavy #24bffb;
+}
 
 /* Spinning wheel */
 

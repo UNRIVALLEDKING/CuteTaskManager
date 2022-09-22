@@ -16,6 +16,7 @@ function App() {
     }
   });
   const [task, setTask] = useState("");
+  // const [editId, setEditId] = useState(null);
 
   // Functions
 
@@ -35,6 +36,20 @@ function App() {
       setTask("");
     }
   };
+
+  // Complete Task Function
+  const completeTask = (task) => {
+    setAllTasks(
+      allTasks.map((item, id) => {
+        if (task === id) {
+          return { ...item, status: "completed" };
+        }
+        return item;
+      })
+    );
+  };
+
+  console.log("allTasks", allTasks);
 
   // Delete Task Function
   const deleteTask = (task) => {
@@ -112,12 +127,21 @@ function App() {
           >
             {allTasks.map((task, id) => (
               <ul key={id} className="toDoList">
-                <li style={{ width: "65%", display: "inline-block" }}>
+                <li
+                  style={{ width: "65%", display: "inline-block" }}
+                  className={task.status === "completed" ? "comp" : ""}
+                >
                   <span>{id + 1} )</span> {task.taskName}{" "}
                 </li>
-                <button onClick={() => deleteTask(id)} className="button">
-                  <span>Dispose</span>
-                </button>
+                {task.status === "ongoing" ? (
+                  <button onClick={() => completeTask(id)} className="button">
+                    <span>Complete</span>
+                  </button>
+                ) : (
+                  <button onClick={() => deleteTask(id)} className="button">
+                    <span>Dispose</span>
+                  </button>
+                )}
               </ul>
             ))}
           </div>
