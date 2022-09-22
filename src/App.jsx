@@ -77,7 +77,7 @@ function App() {
         <ToastContainer />
         <section className="container">
           <div className="heading">
-            <img className="heading__img" src={laptop} />
+            <img className="heading__img" src={laptop} alt="Laptop Image" />
             <h1 className="heading__title">Task Manager</h1>
           </div>
           <form className="form" onSubmit={formSubmit}>

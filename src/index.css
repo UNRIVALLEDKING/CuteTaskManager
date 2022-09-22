@@ -133,7 +133,7 @@ body {
   text-decoration: line-through wavy #24bffb;
 }
 .toDoList .complete {
-  text-decoration: line-through wavy #24bffb;
+  text-decoration: line-through #24bffb;
 }
 
 /* Spinning wheel */
