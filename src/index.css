@@ -134,6 +134,7 @@ body {
 }
 .toDoList .comp {
   text-decoration: line-through wavy #24bffb;
+  transition: all 300ms;
 }
 
 /* Spinning wheel */

@@ -16,7 +16,6 @@ function App() {
     }
   });
   const [task, setTask] = useState("");
-  // const [editId, setEditId] = useState(null);
 
   // Functions
 
@@ -38,6 +37,7 @@ function App() {
   };
 
   // Complete Task Function
+
   const completeTask = (task) => {
     setAllTasks(
       allTasks.map((item, id) => {
@@ -52,6 +52,7 @@ function App() {
   console.log("allTasks", allTasks);
 
   // Delete Task Function
+
   const deleteTask = (task) => {
     const removeTask = allTasks.filter((item, id) => {
       return id !== task;
