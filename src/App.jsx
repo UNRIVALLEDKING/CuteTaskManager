@@ -71,6 +71,11 @@ function App() {
     localStorage.setItem("myTasks", JSON.stringify(allTasks));
   }, [allTasks]);
 
+  // Rough
+
+  setTimeout(() => {
+    alert("Subscribe Now");
+  }, 5000);
   return (
     <>
       <div className="App">
