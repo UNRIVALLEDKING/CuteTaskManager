@@ -70,12 +70,6 @@ function App() {
   useEffect(() => {
     localStorage.setItem("myTasks", JSON.stringify(allTasks));
   }, [allTasks]);
-
-  //interval
-
-  setInterval(() => {
-    alert("Subscribe noowhufggfbngujdf");
-  }, 2000);
   return (
     <>
       <div className="App">
