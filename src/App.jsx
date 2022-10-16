@@ -6,7 +6,6 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
   // States
 
-  // const [allTasks, setAllTasks] = useState([]);
   const [allTasks, setAllTasks] = useState(() => {
     const savedTasks = localStorage.getItem("myTasks");
     if (savedTasks) {
